@@ -1,0 +1,26 @@
+{
+  "name": "ui-kit",
+  "version": "1.0.0",
+  "description": "An HTML5 UI Kit",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass assets/styles/main.scss assets/styles/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisalemons/ui-kit.git"
+  },
+  "keywords": [
+    "html5",
+    "ui"
+  ],
+  "author": "Lisa Lemons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisalemons/ui-kit/issues"
+  },
+  "homepage": "https://github.com/lisalemons/ui-kit#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
