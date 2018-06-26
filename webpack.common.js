@@ -1,18 +1,16 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin'); 
 
 module.exports = {
     entry: {
-        app: './src/index.js',
+        app: './src/assets/js/index.js',
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: 'UI Kit'
-        }),
-        new ExtractTextPlugin("[name].html"),
+        })
     ],
     output: {
         filename: '[name].bundle.js',
@@ -20,13 +18,13 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: [/\.scss$/,  /\.html$/],
+            test: [/\.scss$/],
             use: [
                 "html-loader",
-                process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader, 
+                "style-loader",
                 "css-loader", // translates css into CommonJS
                 "sass-loader" // compiles Sass to CSS
             ]
         }]
     }
-}
+};
